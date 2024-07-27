@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav__home">
+
+    <fragment
+        android:id="@+id/nav__home"
+        android:name="com.example.homeelecation.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.homeelecation.ui.Cart.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.example.homeelecation.ui.orders.My_OrderFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_my__order">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.homeelecation.ui.profile.My_AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_my__account" />
+    <fragment
+        android:id="@+id/nav_wishlist"
+        android:name="com.example.homeelecation.ui.wishList.Wishlist_Fragment"
+        android:label="Wishlist"
+        tools:layout="@layout/fragment_wishlist_" />
+    <fragment
+        android:id="@+id/nav_coupon"
+        android:name="com.example.homeelecation.ui.coupons.CouponFragment"
+        android:label="Coupon"
+        tools:layout="@layout/fragment_coupon" />
+</navigation>
