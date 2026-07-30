@@ -1,0 +1,5 @@
+- `[x]` Add `CartViewModel` field to `PLaceActivity3.java`
+- `[x]` Initialize `CartViewModel` in `PLaceActivity3#onCreate`
+- `[x]` Update `CartAdapter` constructor call in `PLaceActivity3`
+- `[x]` Update cart clearing logic in `PLaceActivity3#onPaymentSuccess`
+- `[x]` Verify compilation with `./gradlew :customer:compileDebugJavaWithJavac`

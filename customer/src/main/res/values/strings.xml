@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Home Elecation</string>
+    <string name="title_activity_home2">HomeActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="view">viewpager2.contentDescription</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_99">99</string>
+    <string name="todo">TODO</string>
+
+    <string name="price">RS.2500/-</string>
+    <string name="title">Havels</string>
+    <string name="description">400mm Sameera Fan</string>
+    <string name="name">Full Name </string>
+    <string name="phone">Phone Number</string>
+
+    <!-- Menu Titles -->
+    <string name="menu_search">Search</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_cart">Cart</string>
+
+</resources>

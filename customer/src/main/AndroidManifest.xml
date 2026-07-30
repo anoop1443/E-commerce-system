@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="true" />
+
+    <application
+        android:name=".HomeElecationApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HomeElecation"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.profile.HelpCenterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.BankAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.HelpQuestionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.FAQDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.BillingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.orders.QuickOrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.quickOrder.QuickOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.place.PaymentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeElecation.NoActionBar" />
+        <activity
+            android:name=".ui.details.FullScreenImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.support.MyTicketsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.notification.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.UpDateProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Cart.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.categoryView.Category_activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.allView.ViewAllActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".ui.orders.Orders_DetailsActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".ui.details.ProductDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.place.PLaceActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".ui.address.Add_delivery_address_Activity3"
+            android:exported="false" />
+        <activity
+            android:name=".ui.address.Select_Address_Activity3"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_home2"
+            android:theme="@style/Theme.HomeElecation.NoActionBar" />
+        <activity
+            android:name=".VerificationActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserDetailsActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

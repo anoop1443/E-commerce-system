@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_finance_hub"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Finance Hub" />
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_user_search"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="Search User" />
+
+
+        <item
+            android:id="@+id/nav__home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_cart"
+            android:title="My  cart" />
+
+
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/ic_wishlist"
+            android:title="My wishlist"/>
+        <item
+            android:id="@+id/nav_coupon"
+            android:icon="@drawable/discount_coupan24"
+            android:title="Coupons"/>
+        <item
+            android:id="@+id/home2Fragment"
+            android:icon="@drawable/ic_home"
+            android:title="fragment_home2"/>
+
+        <item
+            android:id="@+id/nav_management"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="Management" />
+        <item
+            android:id="@+id/nav_help_center"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="Help Center" />
+        <item
+            android:id="@+id/nav_trash"
+            android:icon="@android:drawable/ic_menu_delete"
+            android:title="Recycle Bin" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person"
+            android:title="My Account"/>
+    </group>
+</menu>

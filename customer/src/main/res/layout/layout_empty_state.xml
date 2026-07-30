@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/empty_state_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:visibility="gone"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/empty_state_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/empty_img" />
+
+    <TextView
+        android:id="@+id/empty_state_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Nothing here yet"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/empty_state_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Your cart/order list is currently empty. Start exploring our services!"
+        android:textColor="#888888"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/empty_state_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FF9810"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="Start Shopping"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="24dp" />
+
+</LinearLayout>

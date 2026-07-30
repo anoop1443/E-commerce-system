@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".AdminApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HomeAdmin"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" />
+
+        <activity
+            android:name=".ui.finance.FinanceDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".ui.finance.WithdrawalApprovalActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".ui.finance.RefundApprovalActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".ui.finance.FinanceDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".ui.management.ElectricianProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+
+        <activity
+            android:name=".ui.categoryView.ManageCategoriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.categoryView.AddCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.management.MainManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.management.SupportManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.management.StaffProfileEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.AdminOrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpSuppot.SupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.orders.OrderDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".user.UserSearchActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
+        <activity android:name=".ui.slideshow.edit.AddAdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.slideshow.edit.AddBannerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.edit.ManageHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.edit.HomeEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.edit.CategoryEditContainerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.details.EditProductSpecificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.addProduct.EditProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.addProduct.AddProductActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".AdminRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.notification.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.UpDateProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Cart.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.categoryView.Category_activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.allView.ViewAllActivity2"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.details.ProductDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.place.PLaceActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".ui.address.Add_delivery_address_Activity3"
+            android:exported="false" />
+        <activity
+            android:name=".ui.address.Select_Address_Activity3"
+            android:exported="false" />
+        <activity
+            android:name=".ui.quickServices.AddQuickServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.quickServices.ManageQuickServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.trash.TrashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.helpCenter.HelpCenterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".ui.helpCenter.HelpCategoryDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".ui.orders.AdminQuickOrdersActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".ui.orders.AdminOrdersActivity"
+            android:exported="false"
+            android:label="Orders"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".HomeActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.HomeAdmin.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

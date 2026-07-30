@@ -5,12 +5,22 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "Home Elecation"
-include ':app'
+rootProject.name = "Home Project"
+include ':customer'
+include ':admin'
+include ':delivery'
+
+project(':customer').projectDir = new File('customer')
+project(':admin').projectDir = new File('admin')
+project(':delivery').projectDir = new File('delivery')

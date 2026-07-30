@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cart_itme_constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="5dp">
+
+    <ImageView
+        android:id="@+id/cart_product_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tebal_fan" />
+
+    <TextView
+        android:id="@+id/cart_product_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:text="Table Fan (White)"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cart_product_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cart_product_prise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Rs.4599"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_product_cut_prise"
+        app:layout_constraintStart_toEndOf="@+id/cart_product_cut_prise"
+        app:layout_constraintTop_toTopOf="@+id/cart_product_cut_prise" />
+
+    <TextView
+        android:id="@+id/cart_product_cut_prise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="RS.4799"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/cart_product_image"
+        app:layout_constraintTop_toBottomOf="@+id/cart_product_title" />
+
+    <View
+        android:id="@+id/cart_item_divider4"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#333333"
+
+        app:layout_constraintBottom_toBottomOf="@+id/cart_product_cut_prise"
+        app:layout_constraintEnd_toEndOf="@+id/cart_product_cut_prise"
+        app:layout_constraintStart_toStartOf="@+id/cart_product_cut_prise"
+        app:layout_constraintTop_toTopOf="@+id/cart_product_cut_prise" />
+
+    <TextView
+        android:id="@+id/cart_coupon_offers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="1 coupon 2 offers applied"
+        android:textColor="#FD34A802"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/cart_product_prise"
+        app:layout_constraintTop_toBottomOf="@+id/cart_product_cut_prise" />
+
+    <TextView
+        android:id="@+id/cart_product_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rond_set"
+        android:backgroundTint="#000000"
+        android:drawableEnd="@drawable/ic_arrow_drop_down"
+        android:drawablePadding="5dp"
+        android:padding="3dp"
+        android:text="Qty: 1"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_product_image" />
+
+    <TextView
+        android:id="@+id/place_work_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Work by Fri Sep 3"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_product_qty" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/place_service_charge"
+        app:layout_constraintStart_toEndOf="@+id/place_work_day"
+        app:layout_constraintTop_toTopOf="@+id/place_service_charge" />
+
+    <TextView
+        android:id="@+id/place_service_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Service Charge"
+        android:textColor="#3CBA0F"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/place_work_day"
+        app:layout_constraintStart_toEndOf="@+id/divider5"
+        app:layout_constraintTop_toTopOf="@+id/place_work_day" />
+
+    <TextView
+        android:id="@+id/place_service_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="2dp"
+        android:text="Rs 200"
+        android:textColor="#3CBA0F"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/place_service_charge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/place_service_charge"
+        app:layout_constraintTop_toTopOf="@+id/place_service_charge" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_work_day" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F3"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_creator="@+id/divider9">
+
+        <TextView
+            android:id="@+id/cart_item_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_delete_24"
+            android:drawablePadding="4dp"
+            android:text="Remove"
+            android:textSize="20sp" />
+
+
+<!--        <Button-->
+<!--            android:id="@+id/cart_item_buy_bt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:drawableLeft="@drawable/ic_baseline_show_chart_24"-->
+<!--            android:text="Buy this now"-->
+<!--            android:textColor="#605F5F"-->
+<!--            android:textSize="12sp"-->
+<!--            android:visibility="gone" />-->
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

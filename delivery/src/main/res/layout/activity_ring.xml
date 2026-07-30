@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
+    tools:context=".ringtoun.RingActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tone Type चुनें जिसे आप Copy करना चाहते हैं:"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Call Ringtone Button -->
+    <Button
+        android:id="@+id/btn_pick_ringtone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call Ringtone चुनें और Copy करें"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- Alarm Tone Button -->
+    <Button
+        android:id="@+id/btn_pick_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alarm Tone चुनें और Copy करें"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- Notification Tone Button -->
+    <Button
+        android:id="@+id/btn_pick_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification Tone चुनें और Copy करें"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Status Display -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="स्थिति: कोई tone नहीं चुनी गई।"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        android:text="सभी tones 'Downloads' folder में कॉपी की जाएंगी।"
+        android:textSize="14sp"/>
+
+</LinearLayout>

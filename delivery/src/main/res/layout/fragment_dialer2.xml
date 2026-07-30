@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- फोन नंबर दिखाने के लिए TextView -->
+    <TextView
+        android:id="@+id/phoneNumberTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext_background"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_marginBottom="24dp"
+        android:textColor="#333333"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:singleLine="true"/>
+
+    <!-- डायलर कीपैड -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:layout_gravity="center"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false">
+
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button1" android:text="1" />
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button2" android:text="2" />
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button3" android:text="3" />
+
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button4" android:text="4" />
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button5" android:text="5" />
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button6" android:text="6" />
+
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button7" android:text="7" />
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button8" android:text="8" />
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button9" android:text="9" />
+
+        <Button style="@style/DialerButtonStyle" android:id="@+id/buttonStar" android:text="*" />
+        <Button style="@style/DialerButtonStyle" android:id="@+id/button0" android:text="0" />
+        <Button style="@style/DialerButtonStyle" android:id="@+id/buttonHash" android:text="#" />
+    </GridLayout>
+
+    <!-- कॉल और बैकस्पेस बटन -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <ImageButton
+            android:id="@+id/callButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/green_circle_button"
+            android:src="@android:drawable/sym_action_call"
+            android:contentDescription="कॉल करें"
+            android:padding="16dp" />
+
+        <ImageButton
+            android:id="@+id/backspaceButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/gray_circle_button"
+            android:src="@drawable/ic_backspace_black_24dp"
+            android:contentDescription="बैकस्पेस"
+            android:layout_marginStart="32dp"
+            android:padding="16dp" />
+    </LinearLayout>
+</LinearLayout>

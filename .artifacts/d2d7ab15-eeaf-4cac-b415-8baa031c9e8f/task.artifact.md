@@ -1,0 +1,6 @@
+- `[x]` Remove unused Kotlin plugin to fix `builtInKotlin` warning
+- `[x]` Remove `android.builtInKotlin=false` from `gradle.properties`
+- `[x]` Investigate and fix `newDsl` casting error
+- `[x]` Remove `android.newDsl=false` from `gradle.properties`
+- `[x]` Remove warning suppression flags
+- `[x]` Final build verification

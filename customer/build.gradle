@@ -1,0 +1,103 @@
+plugins {
+    alias(libs.plugins.app.android)
+    alias(libs.plugins.app.google.services)
+    alias(libs.plugins.app.hilt)
+}
+
+android {
+    namespace = 'com.example.homeelecation'
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId = "com.example.homeelecation"
+        minSdk = 24
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "META-INF/*"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    dependenciesInfo {
+        includeInApk true
+        includeInBundle true
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+dependencies {
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation libs.firebase.appcheck.playintegrity
+    implementation libs.firebase.appcheck.debug
+    implementation(libs.firebase.analytics)
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.swiperefreshlayout
+    implementation libs.gridlayout
+    implementation libs.firebase.firestore
+    testImplementation libs.testng
+
+    implementation libs.play.services.location
+    implementation libs.media3.common
+    implementation libs.activity
+    implementation libs.recyclerview
+    implementation libs.firebase.functions
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation libs.browser
+    implementation(platform(libs.kotlin.bom))
+
+    implementation libs.roundedimageview
+    implementation libs.glide
+    // Correcting glide compiler
+    annotationProcessor libs.glide.compiler
+
+    implementation libs.circleimageview
+    implementation libs.razorpay
+    implementation libs.okhttp
+    implementation libs.okhttp.logging
+    implementation libs.commons.text
+
+    implementation libs.photoView
+
+    implementation libs.hilt.android
+    annotationProcessor libs.hilt.compiler
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quick_service_container"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/back_button"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/quick_service_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_shopping_cart_24"
+         />
+
+    <TextView
+        android:id="@+id/quick_service_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Service Name"
+        android:layout_marginStart="15dp"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/quick_service_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹199"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical" />
+</LinearLayout>

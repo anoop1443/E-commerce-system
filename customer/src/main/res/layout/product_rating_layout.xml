@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ratings &amp; Reviews"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Average Rating Section -->
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_rating">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/product_rating_layout_star_rating_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:textColor="@color/black"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/image_star_rating"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="4dp"
+                    app:srcCompat="@drawable/star_rate"
+                    app:tint="#FFC107" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/product_rating_layout_total_user_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="27 Ratings"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Vertical Divider -->
+        <View
+            android:id="@+id/vertical_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="#EEEEEE"
+            app:layout_constraintBottom_toBottomOf="@+id/rating_progressBar_contenr"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+            app:layout_constraintTop_toTopOf="@+id/rating_progressBar_contenr" />
+
+        <!-- Star Labels (5, 4, 3, 2, 1) -->
+        <LinearLayout
+            android:id="@+id/rating_numbar_contenr_star"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/rating_progressBar_contenr"
+            app:layout_constraintStart_toEndOf="@+id/vertical_divider"
+            app:layout_constraintTop_toTopOf="@+id/rating_progressBar_contenr">
+
+            <LinearLayout style="@style/RatingLabelRow">
+                <TextView style="@style/RatingLabelText" android:text="5" />
+                <ImageView style="@style/RatingLabelStar" />
+            </LinearLayout>
+            <LinearLayout style="@style/RatingLabelRow">
+                <TextView style="@style/RatingLabelText" android:text="4" />
+                <ImageView style="@style/RatingLabelStar" />
+            </LinearLayout>
+            <LinearLayout style="@style/RatingLabelRow">
+                <TextView style="@style/RatingLabelText" android:id="@+id/product_images_layout_wishlist_StarRating" android:text="3" />
+                <ImageView style="@style/RatingLabelStar" />
+            </LinearLayout>
+            <LinearLayout style="@style/RatingLabelRow">
+                <TextView style="@style/RatingLabelText" android:text="2" />
+                <ImageView style="@style/RatingLabelStar" />
+            </LinearLayout>
+            <LinearLayout style="@style/RatingLabelRow">
+                <TextView style="@style/RatingLabelText" android:text="1" />
+                <ImageView style="@style/RatingLabelStar" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Progress Bars -->
+        <LinearLayout
+            android:id="@+id/rating_progressBar_contenr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/rating_number_container"
+            app:layout_constraintStart_toEndOf="@+id/rating_numbar_contenr_star"
+            app:layout_constraintTop_toBottomOf="@+id/title_rating">
+
+            <ProgressBar android:id="@+id/progressBar" style="@style/RatingProgressBar" android:progress="70" android:progressTint="#4CAF50" />
+            <ProgressBar android:id="@+id/progressBar2" style="@style/RatingProgressBar" android:progress="60" android:progressTint="#8BC34A" />
+            <ProgressBar android:id="@+id/progressBar3" style="@style/RatingProgressBar" android:progress="50" android:progressTint="#FFEB3B" />
+            <ProgressBar android:id="@+id/progressBar4" style="@style/RatingProgressBar" android:progress="40" android:progressTint="#FF9800" />
+            <ProgressBar android:id="@+id/progressBar5" style="@style/RatingProgressBar" android:progress="30" android:progressTint="#F44336" />
+        </LinearLayout>
+
+        <!-- Rating Counts -->
+        <LinearLayout
+            android:id="@+id/rating_number_container"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/rating_progressBar_contenr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rating_progressBar_contenr">
+
+            <TextView android:id="@+id/textView9" style="@style/RatingCountText" android:text="12" />
+            <TextView android:id="@+id/textView10" style="@style/RatingCountText" android:text="4" />
+            <TextView android:id="@+id/textView11" style="@style/RatingCountText" android:text="9" />
+            <TextView android:id="@+id/textView12" style="@style/RatingCountText" android:text="0" />
+            <TextView android:id="@+id/textView13" style="@style/RatingCountText" android:text="2" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_rating"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#EEEEEE"
+            app:layout_constraintTop_toBottomOf="@+id/rating_progressBar_contenr" />
+
+        <!-- Total Figure (Redundant but preserved ID) -->
+        <TextView
+            android:id="@+id/product_rating_layout_total_rating_figure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/divider_rating"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_your_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Rate this product"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_rating" />
+
+        <!-- Interactive Rating Stars -->
+        <LinearLayout
+            android:id="@+id/rate_now_contenr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_your_rating">
+
+            <ImageView android:id="@+id/imageView6" style="@style/InteractiveStar" />
+            <ImageView android:id="@+id/imageView7" style="@style/InteractiveStar" />
+            <ImageView android:id="@+id/imageView8" style="@style/InteractiveStar" />
+            <ImageView android:id="@+id/imageView9" style="@style/InteractiveStar" />
+            <ImageView android:id="@+id/imageView10" style="@style/InteractiveStar" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

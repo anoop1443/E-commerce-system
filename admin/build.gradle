@@ -1,0 +1,72 @@
+plugins {
+    alias(libs.plugins.app.android)
+    alias(libs.plugins.app.google.services)
+}
+
+android {
+    namespace 'com.example.homeadmin'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.homeadmin"
+        minSdk 28
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation platform(libs.firebase.bom)
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity'
+    implementation 'com.google.firebase:firebase-appcheck-debug'
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.firebase.firestore
+    implementation libs.firebase.auth
+    implementation libs.gridlayout
+    implementation libs.firebase.storage
+    implementation libs.firebase.database
+    implementation libs.contentpager
+    implementation libs.recyclerview
+    implementation libs.legacy.support.v4
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    // Glide for image loading
+    implementation libs.glide
+    annotationProcessor libs.glide.compiler
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.16.0'
+
+    implementation libs.okhttp
+    implementation libs.okhttp.logging
+    implementation libs.razorpay
+    implementation libs.circleimageview
+    implementation libs.roundedimageview
+    implementation libs.palette.ktx
+    implementation libs.android.image.cropper
+}

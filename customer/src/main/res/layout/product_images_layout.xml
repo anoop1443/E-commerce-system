@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="16dp">
+
+    <!-- Image Slider Section -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/product_image_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/viewpager_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_viewpager"
+        app:tabBackground="@drawable/dot_seletor"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@null" />
+
+    <!-- Wishlist Button Overlay -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_to_wishlist_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_wishlist"
+        app:tint="@color/wish" />
+
+    <!-- Title and Rating -->
+    <TextView
+        android:id="@+id/product_images_layout_Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Product Title Loading..."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewpager_indicator" />
+
+    <LinearLayout
+        android:id="@+id/rating_pill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/status_indicator_open"
+        android:backgroundTint="#4CAF50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_images_layout_Title">
+
+        <TextView
+            android:id="@+id/product_images_layout_wishlist_StarRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="2dp"
+            android:src="@drawable/star_rate"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_images_layout_average_rating_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="(8,343 Ratings)"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rating_pill"
+        app:layout_constraintStart_toEndOf="@+id/rating_pill"
+        app:layout_constraintTop_toTopOf="@+id/rating_pill" />
+
+    <!-- Pricing Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pricing_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/conr_redis"
+        android:backgroundTint="#6BB8E6AC"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating_pill">
+
+        <TextView
+            android:id="@+id/product_images_layout_price_deal_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEAL OF THE DAY"
+            android:textColor="#1976D2"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_images_layout_price_textview_fix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="₹14,999"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_images_layout_price_deal_textview" />
+
+        <TextView
+            android:id="@+id/product_images_layout_catup_price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="₹19,999"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/product_images_layout_price_textview_fix"
+            app:layout_constraintStart_toEndOf="@id/product_images_layout_price_textview_fix" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#888888"
+            app:layout_constraintBottom_toBottomOf="@id/product_images_layout_catup_price_textview"
+            app:layout_constraintEnd_toEndOf="@id/product_images_layout_catup_price_textview"
+            app:layout_constraintStart_toStartOf="@id/product_images_layout_catup_price_textview"
+            app:layout_constraintTop_toTopOf="@id/product_images_layout_catup_price_textview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/product_images_layout_redeem_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rond_set"
+        android:backgroundTint="#F8F3E9"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/pricing_container">
+
+        <TextView
+            android:id="@+id/redeem_product_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Check price after coupon redeem"
+            android:textColor="#855C33"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/product_images_layout_redeem_product_button"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REDEEM"
+            android:textColor="#FF9800"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+- [x] Update Data Models with Decline Fields
+    - [x] [OrderModel.java (Admin)](file:///C:/Users/anoop/AndroidStudio/HomeElecation/admin/src/main/java/com/example/homeadmin/ui/orders/OrderModel.java)
+    - [x] [QuickOrderModel.java (Admin)](file:///C:/Users/anoop/AndroidStudio/HomeElecation/admin/src/main/java/com/example/homeadmin/ui/orders/QuickOrderModel.java)
+    - [x] [OrderModel.java (Delivery)](file:///C:/Users/anoop/AndroidStudio/HomeElecation/delivery/src/main/java/com/example/deliveryboy/order/OrderModel.java)
+    - [x] [Order.java (Delivery)](file:///C:/Users/anoop/AndroidStudio/HomeElecation/delivery/src/main/java/com/example/deliveryboy/orderfech/Order.java)
+    - [x] [QuickOrderModel.java (Customer)](file:///C:/Users/anoop/AndroidStudio/HomeElecation/customer/src/main/java/com/example/homeelecation/ui/orders/QuickOrderModel.java)
+- [x] Implement Decline Logic in Delivery App
+    - [x] Add Decline Button to [item_order.xml](file:///C:/Users/anoop/AndroidStudio/HomeElecation/delivery/src/main/res/layout/item_order.xml)
+    - [x] Update [OrderAdapter.java (Delivery)](file:///C:/Users/anoop/AndroidStudio/HomeElecation/delivery/src/main/java/com/example/deliveryboy/orderfech/OrderAdapter.java) to handle decline workflow
+- [x] Update Admin App UI to show Decline Information
+    - [x] Update [OrderAdapter.java (Admin)](file:///C:/Users/anoop/AndroidStudio/HomeElecation/admin/src/main/java/com/example/homeadmin/ui/orders/OrderAdapter.java)
+    - [x] Update [AdminQuickOrderAdapter.java (Admin)](file:///C:/Users/anoop/AndroidStudio/HomeElecation/admin/src/main/java/com/example/homeadmin/ui/orders/AdminQuickOrderAdapter.java)
+- [x] Verification
+    - [x] Build Admin and Delivery apps
+    - [ ] Manual test flow: Assign -> Decline -> Check Admin UI -> Reassign

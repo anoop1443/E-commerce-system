@@ -1,0 +1,75 @@
+plugins {
+    alias(libs.plugins.app.android)
+    alias(libs.plugins.app.google.services)
+    alias(libs.plugins.app.secrets)
+}
+
+android {
+    namespace 'com.example.deliveryboy'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.deliveryboy"
+        minSdk 28
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "META-INF/*"
+        }
+    }
+}
+
+dependencies {
+    implementation(platform(libs.firebase.bom))
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.firebase.auth
+    implementation libs.credentials
+    implementation libs.credentials.play.services.auth
+    implementation libs.googleid
+    implementation libs.firebase.firestore
+    implementation libs.play.services.maps
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation libs.play.services.location
+
+    // glide
+    implementation libs.glide
+    annotationProcessor libs.glide.compiler
+
+    // camera
+    implementation libs.camera.core
+    implementation libs.camera.camera2
+    implementation libs.camera.lifecycle
+    implementation libs.camera.view
+    implementation libs.camera.extensions
+    implementation libs.guava
+}

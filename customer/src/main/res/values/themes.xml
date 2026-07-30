@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HomeElecation" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Add other requested colors as theme attributes if they are meant to be used globally as theme attributes -->
+        <!-- Note: textColorPrimary, colorNavigationBar, progress_start, progress_end are typically used directly as @color resources or as specific widget attributes, not usually as global theme attributes like colorPrimary. -->
+        <!-- If you want to use them as theme attributes, you would define custom attributes first. -->
+        <!-- For now, I will set the primary accent colors. -->
+
+    </style>
+
+    <style name="Theme.HomeElecation" parent="Base.Theme.HomeElecation" />
+
+    <style name="Theme.HomeElecation.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.HomeElecation.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="Theme.HomeElecation.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="SearchViewTheme" parent="Widget.AppCompat.SearchView">
+        <item name="colorControlActivated">@color/black</item>
+        <item name="android:textCursorDrawable">@drawable/black_cursor</item>
+    </style>
+</resources>
