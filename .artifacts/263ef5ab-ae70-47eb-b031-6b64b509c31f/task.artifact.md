@@ -1,6 +1,0 @@
-- `[x]` Update `MyOrderItemModel.java` in admin module
-- `[x]` Update `HomepageModel.java` in admin module
-- `[x]` Update `OrderItem.java` in admin module
-- `[x]` Update `WishlistModel.java` in admin module
-- `[x]` Update `SliderModel.java` in admin module
-- `[x]` Verify changes with Gradle build
